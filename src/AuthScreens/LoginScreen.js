@@ -4,9 +4,11 @@ import React from 'react'
 const LoginScreen = () => {
   return (
     <View>
-      <Text>LoginScreen</Text>
+        <View>
+            
+        </View>
     </View>
-  )
-}
+  );
+};
 
 export default LoginScreen
