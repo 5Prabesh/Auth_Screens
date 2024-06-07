@@ -1,4 +1,4 @@
-import { View, Text, Image,TouchableOpacity } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome'
 
@@ -6,29 +6,30 @@ const OnBoarding = ({ navigation }) => {
     return (
 
         <View style={{
-            flex: 1
+            // flex: 1
         }}>
             <View style={{
-                marginTop: '20%',
+                marginTop: 30,
                 alignContent: 'center',
                 alignItems: 'center'
             }}>
-                <Image source={require('../assets/Logo/wolf.png')} style={{
-                    height: '65%',
-                    width: '50%'
-                }} />
+                <Image source={require('../assets/Image/wolf.png')} style={{
+                    height: '67%',
+                    width: '55%'
+                }}
+                />
             </View>
             <Text style={{
                 color: 'black',
                 fontWeight: 'bold',
                 fontSize: 25,
                 textAlign: 'center',
-                letterSpacing:4
+                letterSpacing: 4
             }}>
                 We Deliver pet{'\n'} products worldwide
             </Text>
             <Text style={{
-                color:'black',
+                color: 'black',
                 fontWeight: 400,
                 fontSize: 15,
                 textAlign: 'center',
@@ -37,29 +38,59 @@ const OnBoarding = ({ navigation }) => {
                 {'\n'}Delivery on time is our commitment
             </Text>
             <View style={{
-                alignItems:'flex-end',
-                marginTop: 20,
-                marginRight: 20,
+                marginTop: 30,
+                paddingHorizontal: 40
             }}>
-                <TouchableOpacity 
-                activeOpacity={0.1} 
-                onPress={()=>navigation.navigate('LoginScreen')}
-                style={{
-                    height: 45,
-                    width: 45,
-                    borderColor:'black',
-                    borderRadius: 45,
-                    borderWidth:1,
-                    backgroundColor:'#cbdbf5'
+                <View style={{
+                    width: '100%',
+                    flexDirection: 'row'
                 }}>
-                    <Icon name = 'chevron-right' style={{
-                        color:'black',
-                        fontSize: 25,
-                        marginTop:10,
-                        marginLeft: 14,
-                    }}/>
-                </TouchableOpacity>
+                    <TouchableOpacity 
+                    activeOpacity={0.7}
+                    onPress={()=>navigation.navigate('LoginScreen')}
+                    style={{
+                        width: '50%',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        paddingVertical: 16,
+                        backgroundColor: '#cf83f2',
+                        borderTopLeftRadius: 15,
+                        borderBottomLeftRadius: 15,
+                    }}>
+                        <Text style={{
+                            color: 'black',
+                            fontWeight: 500,
+                            fontSize: 14,
+                        }}>
+                            Login
+                        </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity 
+                    activeOpacity={0.7}
+                    onPress={()=>navigation.navigate('SignUpScreen')}
+                    style={{
+                        width: '50%',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        paddingVertical: 16,
+                        borderColor: '#cf83f2',
+                        borderWidth: 3,
+                        // backgroundColor: 'white',
+                        borderTopRightRadius: 15,
+                        borderBottomRightRadius: 15,
+                    }}>
+                        <Text style={{
+                            color: 'black',
+                            fontWeight: 500,
+                            fontSize: 14,
+                        }}>
+                            Register
+                        </Text>
+                    </TouchableOpacity>
+                </View>
             </View>
+
+
         </View>
     );
 };
