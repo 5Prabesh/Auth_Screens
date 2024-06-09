@@ -72,9 +72,19 @@ const LoginScreen = ({navigation}) => {
             secureTextEntry={true}
             placeholderTextColor={'grey'}
           />
+          <View style={{
+            marginTop: 15
+          }}>
+            <TouchableOpacity 
+            activeOpacity={0.7}
+            onPress={()=>navigation.navigate('ForgotPasswordScreen')}
+            >
+              <Text>Forgot Password?</Text>
+            </TouchableOpacity>
+          </View>
         </View>
         <View style={{
-          marginTop: 20,
+          marginTop: 15,
           marginLeft: 35,
         }}>
           <TouchableOpacity
@@ -134,7 +144,7 @@ const LoginScreen = ({navigation}) => {
             </View>
 
             <View style={{
-              marginTop: 30,
+              marginTop: 20,
               marginLeft:35
             }}>
               <TouchableOpacity
@@ -164,7 +174,7 @@ const LoginScreen = ({navigation}) => {
             </View>
 
       <View style={{
-        marginTop: 50,
+        marginTop: 25,
         flexDirection:'row',
         alignContent:'center',
         alignItems:'center',
