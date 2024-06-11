@@ -1,6 +1,7 @@
 import { View, Text, Image, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome'
+import InputField from '../Components/TextInput';
 
 const LoginScreen = ({navigation}) => {
   return (
@@ -41,15 +42,9 @@ const LoginScreen = ({navigation}) => {
           }}>
             Email address
           </Text>
-          <TextInput style={{
-            marginTop: 10,
-            backgroundColor: 'white',
-            width: '95%',
-            borderRadius: 15,
-            
-          }}
-            placeholder='Enter email address'
-            placeholderTextColor={'grey'}
+
+          <InputField 
+          placeholder={'Enter email address'}
           />
 
           <Text style={{
@@ -61,16 +56,9 @@ const LoginScreen = ({navigation}) => {
             letterSpacing:1
           }}>Password</Text>
          
-          <TextInput
-            style={{
-              marginTop: 10,
-              backgroundColor: 'white',
-              width: '95%',
-              borderRadius: 15,
-            }}
-            placeholder='Enter password'
-            secureTextEntry={true}
-            placeholderTextColor={'grey'}
+          <InputField 
+          placeholder={'Enter Password'}
+          secureTextEntry={true}
           />
           <View style={{
             marginTop: 15

@@ -1,6 +1,7 @@
 import { View, Text, TouchableOpacity, TextInput } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome';
+import InputField from '../Components/TextInput';
 
 const ChangePasswordScreen = ({ navigation }) => {
     return (
@@ -53,15 +54,11 @@ const ChangePasswordScreen = ({ navigation }) => {
                     Enter new password
                 </Text>
                 <View style={{
-                    marginTop: 15
+                    // marginTop: 15
                 }}>
-                    <TextInput style={{
-                        backgroundColor: 'white',
-                        width: '95%',
-                        borderRadius: 15,
-                    }}
-                    placeholder='Enter new password'
-                    placeholderTextColor={'grey'}
+                    
+                    <InputField 
+                    placeholder={'Enter new password'}
                     secureTextEntry={true}
                     />
                 </View>
@@ -79,17 +76,12 @@ const ChangePasswordScreen = ({ navigation }) => {
                     Confirm new password
                 </Text>
                 <View style={{
-                    marginTop: 15
+                    // marginTop: 15
                 }}>
-                    <TextInput style={{
-                        backgroundColor: 'white',
-                        width: '95%',
-                        borderRadius: 15,
-                    }}
-                    placeholder='Confirm new password'
-                    placeholderTextColor={'grey'}
+                    
+                    <InputField 
+                    placeholder={'Confirm new password'}
                     secureTextEntry={true}
-
                     />
                 </View>
             </View>

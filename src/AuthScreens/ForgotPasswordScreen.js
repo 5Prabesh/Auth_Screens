@@ -1,6 +1,7 @@
 import { View, Text, TouchableOpacity, TextInput } from 'react-native';
 import React, { useCallback } from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import InputField from '../Components/TextInput';
 
 
 const ForgotPasswordScreen = ({navigation}) => {
@@ -57,14 +58,9 @@ const ForgotPasswordScreen = ({navigation}) => {
         }}>
           Enter email address
         </Text>
-        <TextInput style={{
-          backgroundColor:'white',
-          borderRadius:15,
-          width: '95%',
-          marginTop: 15,
-        }}
-        placeholder='Enter your email address'
-        placeholderTextColor={'grey'}
+        
+        <InputField 
+        placeholder={'Enter email address'}
         />
       </View>
       <View style={{
