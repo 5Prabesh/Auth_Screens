@@ -2,6 +2,7 @@ import { View, Text, Image, TextInput, TouchableOpacity, ScrollView } from 'reac
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome'
 import InputField from '../Components/TextInput';
+import CustomButton from '../Components/CustomButton';
 
 const LoginScreen = ({navigation}) => {
   return (
@@ -60,6 +61,7 @@ const LoginScreen = ({navigation}) => {
           placeholder={'Enter Password'}
           secureTextEntry={true}
           />
+
           <View style={{
             marginTop: 15
           }}>
@@ -75,28 +77,14 @@ const LoginScreen = ({navigation}) => {
           marginTop: 15,
           marginLeft: 35,
         }}>
-          <TouchableOpacity
           
-            activeOpacity={0.7}
-            style={{
-              height: 50,
-              width: '95%',
-              backgroundColor: '#cc93fa',
-              borderRadius: 15,
-              alignContent: 'center',
-              alignItems: 'center',
+{/* login button */}
+          <CustomButton 
+          label={'Login'}
+          onPress={()=>{}}
+          />
 
-            }}>
-            <Text style={{
-              color: 'black',
-              fontWeight: 500,
-              fontSize: 15,
-              marginTop: 15,
-              letterSpacing:1
-            }}>
-              Login
-            </Text>
-          </TouchableOpacity>
+
         </View>
         </ScrollView>
         <View style={{
@@ -159,6 +147,7 @@ const LoginScreen = ({navigation}) => {
                         Continue with Google
                     </Text>
                 </TouchableOpacity>
+                
             </View>
 
       <View style={{

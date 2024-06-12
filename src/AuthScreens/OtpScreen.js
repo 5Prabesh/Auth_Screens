@@ -1,6 +1,7 @@
 import { View, Text, TouchableOpacity, TextInput, KeyboardAvoidingView } from 'react-native';
 import React, { useRef, useState } from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import CustomButton from '../Components/CustomButton';
 
 
 const OtpScreen = ({ navigation }) => {
@@ -119,27 +120,11 @@ const OtpScreen = ({ navigation }) => {
                 marginTop: 30
 
             }}>
-                <TouchableOpacity
-                    onPress={()=>navigation.navigate('ChangePasswordScreen')}
-                    activeOpacity={0.7}
-                    style={{
-                        height: 50,
-                        width: '95%',
-                        backgroundColor: '#cc93fa',
-                        borderRadius: 15,
-                        alignContent: 'center',
-                        alignItems: 'center',
-                    }}>
-                    <Text style={{
-                        color: 'black',
-                        fontWeight: 500,
-                        fontSize: 15,
-                        marginTop: 15,
-                        letterSpacing: 1
-                    }}>
-                        Verify
-                    </Text>
-                </TouchableOpacity>
+                
+                <CustomButton
+                label={'Verify'}
+                onPress={()=>navigation.navigate('ChangePasswordScreen')}
+                />
             </View>
         </View>
     );

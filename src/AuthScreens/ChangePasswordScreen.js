@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity, TextInput } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import InputField from '../Components/TextInput';
+import CustomButton from '../Components/CustomButton';
 
 const ChangePasswordScreen = ({ navigation }) => {
     return (
@@ -88,28 +89,10 @@ const ChangePasswordScreen = ({ navigation }) => {
             <View style={{
                 marginTop: 25
             }}>
-            <TouchableOpacity
-          onPress={()=>navigation.navigate('LoginScreen')}
-          activeOpacity={0.7}
-          style={{
-            height: 50,
-            width: '95%',
-            backgroundColor: '#cc93fa',
-            borderRadius: 15,
-            alignContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <Text
-            style={{
-              color: 'black',
-              fontWeight: 500,
-              fontSize: 15,
-              marginTop: 15,
-              letterSpacing: 1
-            }}
-          >Confirm</Text>
-        </TouchableOpacity>
+        <CustomButton
+        label={'Confirm'}
+        onPress={()=>navigation.navigate('LoginScreen')}
+        />
             </View>
         </View>
     )

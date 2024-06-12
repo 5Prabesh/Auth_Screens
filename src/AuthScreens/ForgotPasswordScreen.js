@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity, TextInput } from 'react-native';
 import React, { useCallback } from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import InputField from '../Components/TextInput';
+import CustomButton from '../Components/CustomButton';
 
 
 const ForgotPasswordScreen = ({navigation}) => {
@@ -66,27 +67,11 @@ const ForgotPasswordScreen = ({navigation}) => {
       <View style={{
         marginTop: 30
       }}>
-        <TouchableOpacity 
+        
+        <CustomButton 
+        label={'Confirm'}
         onPress={()=>handleOtpRedirection()}
-        activeOpacity={0.7}
-        style={{
-          height: 50,
-          width: '95%',
-          backgroundColor: '#cc93fa',
-          borderRadius: 15,
-          alignContent: 'center',
-          alignItems: 'center',
-        }}>
-          <Text style={{
-            color: 'black',
-            fontWeight: 500,
-            fontSize: 15,
-            marginTop: 15,
-            letterSpacing: 1
-          }}>
-            Confirm
-          </Text>
-        </TouchableOpacity>
+        />
       </View>
     </View>
   );

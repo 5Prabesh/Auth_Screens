@@ -1,6 +1,7 @@
 import { View, Text, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 import React from 'react';
 import InputField from '../Components/TextInput';
+import CustomButton from '../Components/CustomButton';
 
 const SignUpScreen = ({ navigation }) => {
   return (
@@ -89,28 +90,12 @@ const SignUpScreen = ({ navigation }) => {
           marginLeft: 35,
           marginTop: 25
         }}>
-          <TouchableOpacity
-            onPress={() => navigation.navigate('LoginScreen')}
-            activeOpacity={0.7}
-            style={{
-              height: 50,
-              width: '95%',
-              backgroundColor: '#cc93fa',
-              borderRadius: 15,
-              alignContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Text
-              style={{
-                color: 'black',
-                fontWeight: 500,
-                fontSize: 15,
-                marginTop: 15,
-                letterSpacing: 1
-              }}
-            >SignUp</Text>
-          </TouchableOpacity>
+          
+{/* signup button */}
+          <CustomButton
+          label={'SignUp'}
+          onPress={()=>navigation.navigate('LoginScreen')}
+          />
         </View>
       </ScrollView>
 
